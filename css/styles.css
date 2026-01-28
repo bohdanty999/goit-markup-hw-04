@@ -95,6 +95,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .socials-link:hover {
@@ -133,7 +136,7 @@ img {
   gap: 40px;
 }
 
-.nav-list a {
+.header-container a {
   display: block;
   padding: 24px 0;
 }
@@ -160,9 +163,31 @@ img {
   letter-spacing: 0.48px;
 }
 
-.nav-link:focus::after {
+.studio:focus::after {
   content: "";
   width: 48px;
+  height: 4px;
+  background-color: #404bbf;
+  display: flex;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+}
+
+.portfolio:focus::after {
+  content: "";
+  width: 65px;
+  height: 4px;
+  background-color: #404bbf;
+  display: flex;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+}
+
+.contacts:focus::after {
+  content: "";
+  width: 67px;
   height: 4px;
   background-color: #404bbf;
   display: flex;
@@ -301,7 +326,9 @@ img {
 
 .portfolio-item {
   flex-basis: calc((100% - 48px) / 3);
-
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
   cursor: pointer;
 }
 
@@ -329,7 +356,7 @@ img {
   transform: translateY(150%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: box-shadow, transform;
+  transition-property: transform;
 }
 
 .portfolio-item:hover {
