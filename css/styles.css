@@ -163,37 +163,31 @@ img {
   letter-spacing: 0.48px;
 }
 
-.studio:focus::after {
-  content: "";
-  width: 48px;
-  height: 4px;
-  background-color: #404bbf;
-  display: flex;
-  border-radius: 2px;
-  position: absolute;
-  bottom: 0;
+.nav-list a {
+  position: relative;
 }
 
-.portfolio:focus::after {
+.nav-list a::after {
   content: "";
-  width: 65px;
+  width: 100%;
   height: 4px;
   background-color: #404bbf;
   display: flex;
   border-radius: 2px;
   position: absolute;
   bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
-.contacts:focus::after {
-  content: "";
-  width: 67px;
-  height: 4px;
-  background-color: #404bbf;
-  display: flex;
-  border-radius: 2px;
-  position: absolute;
-  bottom: 0;
+.nav-list a.active {
+  color: #404bbf;
+}
+
+.nav-list a:focus::after,
+.nav-list a:target::after,
+.nav-list a.active::after {
+  transform: scaleX(1);
 }
 
 /* #endregion header */
