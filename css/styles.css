@@ -104,6 +104,10 @@ img {
   color: #4d5ae5;
 }
 
+.icons {
+  fill: #f4f4fd;
+}
+
 /* #endregion general-styles */
 
 /* #region header */
@@ -130,7 +134,7 @@ img {
 
 .nav-list a {
   display: block;
-  margin: 24px 0;
+  padding: 24px 0;
 }
 
 .nav {
@@ -278,7 +282,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
   margin-top: 8px;
 }
 
@@ -295,10 +299,7 @@ img {
 
 .portfolio-item {
   flex-basis: calc((100% - 48px) / 3);
-  position: relative;
-  overflow: hidden;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   cursor: pointer;
 }
 
@@ -309,7 +310,13 @@ img {
   border-left: 1px solid #e7e9fc;
 }
 
+.portfolio-overlay-container {
+  position: relative;
+  overflow: hidden;
+}
+
 .overlay {
+  padding: 40px 32px 164px;
   position: absolute;
   top: 0;
   left: 0;
@@ -320,10 +327,7 @@ img {
   transform: translateY(150%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.overlay p {
-  padding: 40px 32px 164px;
+  transition-property:;
 }
 
 .portfolio-item:hover {
@@ -353,7 +357,8 @@ img {
 
 .footer-container {
   display: flex;
-  justify-content: baseline;
+  align-items: baseline;
+
   gap: 120px;
 }
 
@@ -366,6 +371,7 @@ img {
   display: flex;
   gap: 16px;
   margin-top: 16px;
+  justify-content: baseline;
 }
 
 .social-text {
