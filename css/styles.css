@@ -15,6 +15,7 @@ a {
   font-style: normal;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 a:hover,
@@ -159,7 +160,7 @@ img {
   letter-spacing: 0.48px;
 }
 
-.nav-link:active::after {
+.nav-link:focus::after {
   content: "";
   width: 48px;
   height: 4px;
@@ -214,6 +215,7 @@ img {
   box-shadow: 0px 4px 4px 0px #00000026;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .button:hover,
@@ -327,7 +329,7 @@ img {
   transform: translateY(150%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property:;
+  transition-property: box-shadow, transform;
 }
 
 .portfolio-item:hover {
